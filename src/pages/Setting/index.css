@@ -1,0 +1,14 @@
+
+.setting-block{
+  max-width: 1200px;
+  min-height: 800px;
+  margin: 24px auto;
+  padding: 14px 24px 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
+  background-color: #fff;  margin-top: 20px;
+}
+
+.rich-text{
+  text-align: left;
+}

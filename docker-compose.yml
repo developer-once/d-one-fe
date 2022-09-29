@@ -1,0 +1,6 @@
+version: '3'
+services:
+  eagle-fe:
+    image: registry.cn-hangzhou.aliyuncs.com/xux_d_one/eagle-fe:latest
+    ports:
+      - "7003:7003"

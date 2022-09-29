@@ -1,0 +1,13 @@
+.pages{
+  height: 100vh;
+  background: #f5f6fa;
+  overflow: auto;
+}
+
+.block{
+  margin-bottom: 24px;
+  padding: 20px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 6px;
+}

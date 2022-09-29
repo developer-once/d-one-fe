@@ -1,0 +1,42 @@
+.header{
+  display: block;
+  width: auto;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.header-container{
+  display: flex;
+  /* max-width: 800px; */
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header-logo{
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 20px;
+  border: 1px solid red;
+}
+
+.header-title{
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 600;
+  color: #000;
+}
+
+.header-meneu{
+  display: flex;
+  margin: 0 auto;
+}
+
+.meneu-item{
+  width: 100px;
+  font-size: 18px;
+  line-height: 60px;
+}

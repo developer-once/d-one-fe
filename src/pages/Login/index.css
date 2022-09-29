@@ -1,0 +1,40 @@
+.login{
+  display: flex;
+  background-color: #fff;
+}
+
+.login-show{
+  width: 50%;
+  background-size: 100% 100%;
+  background-image: url("https://www.geetest.com/_next/static/images/img_bg-08143f9edc826508817d38c04f4aae4f.png");
+}
+
+.login-block{
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  justify-content: center; 
+  align-items: center;
+}
+
+.login-content{
+  width: 375px;
+  margin: 0 auto;
+}
+
+.login-text{
+  text-align: left;
+}
+
+.login-title{
+  font-size: 36px;
+  line-height: 56px;
+  color: #3b426b;
+}
+
+.login-step{
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #3b426b;
+}
