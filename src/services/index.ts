@@ -6,14 +6,13 @@ interface API {
   instance: AxiosInstance
   get<T = any>(url: string, params: any, config?: AxiosRequestConfig): Promise<T>
   post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
-  only: (request: (...params: any[]) => Promise<any>, handle?: (result: Promise<any>) => Promise<any>) => (...params: any[]) => Promise<any>
 }
 
 const cancelMap = new WeakMap<Promise<any>, () => void>()
 const prevMap = new Map<(...params: any[]) => Promise<any>, Promise<any>>()
 const { protocol, host } = window.location
-// const baseURL: string = "http://localhost:7001/api/";
-const baseURL: string = "/api/";
+const baseURL: string = "http://127.0.0.1:6001/api/";
+// const baseURL: string = "/api/";
 
 function resultHandle(config: AxiosRequestConfig, operate: () => Promise<any>) {
   const source = axios.CancelToken.source()
@@ -64,15 +63,6 @@ const exportApi: API = {
   instance: api,
   get: (url, config = {}) => resultHandle(config, () => api.get(url, config)),
   post: (url, data, config = {}) => resultHandle(config, () => api.post(url, data, config)),
-  only: (request, handle) => (...params) => {
-    const result = request(...params)
-    const prevResult = prevMap.get(request)
-    const cancel = cancelMap.get(prevResult!)
-
-    cancel && cancel()
-    prevMap.set(request, result)
-    return handle ? handle(result) : result
-  }
 }
 
-export default exportApi
+export default exportApi;

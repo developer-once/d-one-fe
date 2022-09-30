@@ -11,7 +11,7 @@ export const createProject = (params: any) => api.post('/create/project', params
 export const getProject = (params: any) => api.get('/get/project', { params });
 
 // --- Project - getList ---
-export const getProjectList = (params: any) => api.get('/get/project/list', { params });
+export const getProjectList = (params: any) => api.get('/project/get/list', { params });
 
 // --- Project - setting ---
 export const setProjectConfig = (params: any) => api.post('/project/set', params);
